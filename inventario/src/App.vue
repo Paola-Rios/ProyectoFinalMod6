@@ -1,6 +1,8 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
+    <!-- <router-link to="/">Home</router-link> | -->
+    <router-link to="/areas">Areas</router-link> |
+    <router-link to="/activos">Activos</router-link>|
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/>
