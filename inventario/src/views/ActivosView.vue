@@ -5,7 +5,7 @@
 </template>
 <script>
     export default {
-        name: 'ActivoView',
+        name: 'ActivosView',
         data() {
             return {
                 titulo: 'Activos'

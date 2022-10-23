@@ -1,53 +1,59 @@
 {
-    "areas":[
-        {
-            "idDepartamento": 1,
-            "nombreDepartamento":"Finanzas",
-            "nombreEncargado":"Jose Linares",
-            "numeroFuncionarios":4
-        },
-        {
-            "idDepartamento": 2,
-            "nombreDepartamento":"Legal",
-            "nombreEncargado":"Fernando Alvarez",
-            "numeroFuncionarios": 2
-        }
-    ],
-    "activos":[
-        {
-            "idActivo": 1,
-            "marca":"HP",
-            "modelo":"Pavilion 360",
-            "estado": "Nuevo",
-            "areaId":1
-        },
-        {
-            "idActivo": 2,
-            "marca":"Acer",
-            "modelo":"acer 1234",
-            "estado": "usado",
-            "areaId":2
-        },
-        {
-            "idActivo": 3,
-            "marca":"Epson",
-            "modelo":"L380",
-            "estado": "usado",
-            "areaId":1
-        },
-        {
-            "idActivo": 4,
-            "marca":"Epson",
-            "modelo":"L380",
-            "estado": "usado",
-            "areaId":2
-        },
-        {
-            "idActivo": 5,
-            "marca":"Toyota",
-            "modelo":"Land Cruiser",
-            "estado":"usado",
-            "areaId":2
-        }
-    ]
+  "areas": [
+    {
+      "id": 1,
+      "nombreArea": "Finanzas",
+      "nombreEncargado": "Jose Linares",
+      "numeroFuncionarios": 4
+    },
+    {
+      "id": 2,
+      "nombreArea": "Legal",
+      "nombreEncargado": "Fernando Alvarez",
+      "numeroFuncionarios": 2
+    },
+    {
+      "nombreArea": "abc",
+      "nombreEncargado": "Jose",
+      "numeroFuncionarios": 4,
+      "id": 3
+    }
+  ],
+  "activos": [
+    {
+      "id": 1,
+      "marca": "HP",
+      "modelo": "Pavilion 360",
+      "estado": "Nuevo",
+      "areaId": 1
+    },
+    {
+      "id": 2,
+      "marca": "Acer",
+      "modelo": "acer 1234",
+      "estado": "usado",
+      "areaId": 2
+    },
+    {
+      "id": 3,
+      "marca": "Epson",
+      "modelo": "L380",
+      "estado": "usado",
+      "areaId": 1
+    },
+    {
+      "id": 4,
+      "marca": "Epson",
+      "modelo": "L380",
+      "estado": "usado",
+      "areaId": 2
+    },
+    {
+      "id": 5,
+      "marca": "Toyota",
+      "modelo": "Land Cruiser",
+      "estado": "usado",
+      "areaId": 2
+    }
+  ]
 }
