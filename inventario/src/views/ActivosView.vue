@@ -25,6 +25,16 @@
             </div>
        </form> 
 
+       <div>
+            <h5>Filtros</h5>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                    :checked="$store.state.activosEnUso" v-on:input="$store.state.activosEnUso = $event.target.checked">
+                <label class="form-check-label" for="flexSwitchCheckChecked">Mostrar solo Activos en uso
+                    {{$store.state.activosEnUso}}</label>
+            </div>
+       </div>
+
        <div class="table-responsive">
             <table class="table table-sm">
                 <thead>
@@ -37,7 +47,8 @@
 
                     </tr>
                 </thead>
-                <tbody v-for="(value) in activos">
+                <!-- <tbody v-for="(value) in activos"> -->
+                <tbody v-for="(value) in lista">
                     <th scope="row">{{value.id}}</th>
                     <td>{{value.marca}}</td>
                     <td>{{value.modelo}}</td>
@@ -118,11 +129,23 @@
 
             },
             lista_() {
+                if(this.$store.state.activosEnUso){
+                    return this.activos.filter(a => {
+                        return a.estado !== 'desuso';
+                    })
+                }
                 return this.activos;
             }
         },
         computed: {
             lista() {
+                if(this.$store.state.activosEnUso){
+                    return this.activos.filter(a => {
+                        // return a.estado.trim().lowercase() !== 'desuso';
+                        return a.estado !== 'desuso';
+
+                    })
+                }
                 return this.activos;
             }
         },

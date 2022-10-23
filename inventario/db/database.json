@@ -38,7 +38,7 @@
     {
       "id": 4,
       "marca": "Epson",
-      "modelo": "L380",
+      "modelo": "L380 Old",
       "estado": "usado",
       "areaId": 2
     },
@@ -46,7 +46,7 @@
       "id": 5,
       "marca": "Toyota",
       "modelo": "Land Cruiser",
-      "estado": "usado",
+      "estado": "desuso",
       "areaId": 2
     }
   ]
