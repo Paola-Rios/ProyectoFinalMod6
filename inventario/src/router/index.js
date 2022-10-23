@@ -22,7 +22,7 @@ const routes = [
   },
   {
     path: '/activos/:id/editar',
-    name: 'editarActivo',
+    name: 'editarActivos',
     component: () => import(/* webpackChunkName: "editarActivos" */ '../views/EditarActivosView.vue')
   },
   {

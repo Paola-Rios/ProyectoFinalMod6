@@ -2,6 +2,7 @@
     <div>
         <h1>{{titulo}}</h1>
         <form @submit.prevent="agregarArea()">
+            <h5>Agregar Área o Departamento</h5>
             <div class="input-group mb-3">
                 <input type="text" class="form-control" v-model="areaActual.nombreArea" placeholder="Nombre Nueva Area"
                     aria-describedby="button-addon2">
@@ -13,12 +14,12 @@
             </div>
         </form>
 
-        <h5>Buscador de Areas {{textoABuscar}}</h5>
         <form action="">
-        <div class="input-group mb-3">
-            <input type="text" v-model="textoABuscar" class="form-control" placeholder="Buscar areas" >
-            <button class="btn btn-outline-secondary" @click.prevent="getAreas()">Buscar</button>
-        </div>
+            <h5>Buscador de Areas</h5>
+            <div class="input-group mb-3">
+                <input type="text" v-model="textoABuscar" class="form-control" placeholder="Buscar areas" >
+                <button class="btn btn-outline-secondary" @click.prevent="getAreas()">Buscar</button>
+            </div>
        </form> 
 
         <div class="table-responsive">
@@ -46,7 +47,7 @@
 </template>
 <script>
     import AppAcciones from '@/components/AppAcciones.vue';
-import { assertExpressionStatement } from '@babel/types';
+    import { assertExpressionStatement } from '@babel/types';
     export default {
         name: 'AreasView',
         data() {
@@ -72,6 +73,8 @@ import { assertExpressionStatement } from '@babel/types';
                 .then(response => {
                     console.log(response);
                     this.areaActual.nombreArea = null;
+                    this.nombreEncargado = null;
+                    this.numeroFuncionarios = null;
                     this.getAreas();
                 })
                 .catch(e => console.log(e));
