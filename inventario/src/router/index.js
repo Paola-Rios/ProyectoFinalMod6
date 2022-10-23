@@ -21,9 +21,19 @@ const routes = [
     component: () => import(/* webpackChunkName: "activos" */ '../views/ActivosView.vue')
   },
   {
+    path: '/activos/:id/editar',
+    name: 'editarActivo',
+    component: () => import(/* webpackChunkName: "editarActivos" */ '../views/EditarActivosView.vue')
+  },
+  {
     path: '/areas',
     name: 'areas',
     component: () => import(/* webpackChunkName: "areas" */ '../views/AreasView.vue')
+  },
+  {
+    path: '/areas/:id/editar',
+    name: 'editarAreas',
+    component: () => import(/* webpackChunkName: "editarAreas" */ '../views/EditarAreasView.vue')
   }
 ]
 

@@ -9,14 +9,8 @@
     {
       "id": 2,
       "nombreArea": "Legal",
-      "nombreEncargado": "Fernando Alvarez",
+      "nombreEncargado": "Fernando Alvarez Mendieta",
       "numeroFuncionarios": 2
-    },
-    {
-      "nombreArea": "abc",
-      "nombreEncargado": "Jose",
-      "numeroFuncionarios": 4,
-      "id": 3
     }
   ],
   "activos": [

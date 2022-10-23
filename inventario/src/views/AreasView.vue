@@ -8,7 +8,7 @@
                 <input type="text" class="form-control" v-model="areaActual.nombreEncargado" placeholder="Nombre Encargado"
                     aria-describedby="button-addon2">
                 <input type="number" class="form-control" v-model="areaActual.numeroFuncionarios" placeholder="Numero de funcionarios"
-                    aria-describedby="button-addon2" min="1">
+                    aria-describedby="button-addon2" min="1" max="1000">
                 <button class="btn btn-outline-secondary" type="submit">Agregar</button>
             </div>
         </form>
@@ -63,7 +63,6 @@ import { assertExpressionStatement } from '@babel/types';
         },
         methods: {
             agregarArea() {
-                debugger;
                 console.log(this.areaActual);
                 axios({
                 method: "post",
@@ -71,7 +70,6 @@ import { assertExpressionStatement } from '@babel/types';
                 data: this.areaActual
             })
                 .then(response => {
-                    debugger;
                     console.log(response);
                     this.areaActual.nombreArea = null;
                     this.getAreas();
@@ -90,6 +88,27 @@ import { assertExpressionStatement } from '@babel/types';
                 .catch(e => {
                     console.log(e);
                 });
+            },
+            irA(opcion, area_id) {
+                if(opcion === 'editar') {
+                    this.$router.push({ name: 'editarAreas', params: { id: area_id } });
+                } else {
+                    if(confirm("Está seguro de eliminar el area con id " + area_id + "?")) {
+                        
+                        //TODO: Agregar Delete para Activos.
+
+                        axios({
+                            method: "delete",
+                            url: "http://localhost:3000/areas/" + area_id
+                        })
+                        .then(response => {
+                            this.getAreas();
+                            console.log(response);
+                        })
+                        .catch(e => console.log(e));
+                    }
+                }
+
             },
             lista_() {
                 return this.areas;
